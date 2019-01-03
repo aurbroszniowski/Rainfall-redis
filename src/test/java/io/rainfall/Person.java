@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Aurélien Broszniowski
+ * Copyright (c) 2014-2019 Aurélien Broszniowski
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,9 +16,9 @@
 
 package io.rainfall;
 
-import jsr166e.ThreadLocalRandom;
 
 import java.io.Serializable;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * @author Aurelien Broszniowski
@@ -29,7 +29,7 @@ public class Person implements Serializable {
   private String name;
   private String firstname;
 
-  public Person(final ThreadLocalRandom random, final long seed) {
+  public Person(ThreadLocalRandom random, final long seed) {
     this.name = "Name" + random.nextLong(seed);
     this.firstname = "FirstName" + random.nextLong(seed);
   }

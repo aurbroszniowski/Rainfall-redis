@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Aurélien Broszniowski
+ * Copyright (c) 2014-2019 Aurélien Broszniowski
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 package io.rainfall;
 
-import jsr166e.ThreadLocalRandom;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * @author Aurelien Broszniowski
@@ -25,7 +25,7 @@ import jsr166e.ThreadLocalRandom;
 public class PersonGenerator implements ObjectGenerator<Person> {
 
   @Override
-  public Person generate(final Long seed) {
+  public Person generate(Long seed) {
     return new Person(ThreadLocalRandom.current(), seed);
   }
 
