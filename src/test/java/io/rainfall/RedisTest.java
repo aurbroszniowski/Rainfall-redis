@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Aurélien Broszniowski
+ * Copyright (c) 2014-2019 Aurélien Broszniowski
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,9 @@ import io.rainfall.configuration.ReportingConfig;
 import io.rainfall.generator.LongGenerator;
 import io.rainfall.redis.RedisOperations;
 import io.rainfall.redis.statistics.RedisResult;
+import io.rainfall.utils.SystemTest;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 
 import static io.rainfall.configuration.ReportingConfig.html;
@@ -38,6 +40,7 @@ import static java.util.concurrent.TimeUnit.MINUTES;
  * @author Aurelien Broszniowski
  */
 
+@Category(SystemTest.class)
 public class RedisTest {
 
 
